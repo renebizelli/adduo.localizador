@@ -1,0 +1,29 @@
+{
+    "name" : "Setup",
+    "endpoint": "/restricted/session/setup",
+    "method" : "POST",
+    "invalid-items": [
+        {
+            "name": "Platform inválido",
+            "data": {
+                "deviceId": "0",
+                "platform": "x"
+            },
+            "code": "error:device.smartphone.form.platform"
+        },
+        {
+            "name": "Platform vazio",
+            "data": {
+                "deviceId": "0"
+            },
+            "code": "error:generic.platform"
+        },
+        {
+            "name": "DeviceId vazio",
+            "data": {
+                "platform": "apple"
+            },
+            "code": "error:auth.setup.deviceId"
+        }
+    ]
+}

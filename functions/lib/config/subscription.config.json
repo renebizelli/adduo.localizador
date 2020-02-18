@@ -1,0 +1,4 @@
+{
+    "free-days-allowed": 30,
+    "days-alert-block": [5, 10, 15]
+}

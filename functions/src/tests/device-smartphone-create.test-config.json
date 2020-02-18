@@ -1,0 +1,29 @@
+{
+    "name": "Device",
+    "endpoint": "/restricted/device/smartphone",
+    "method" : "POST",
+    "invalid-items": [
+        {
+            "name": "Alias vazio",
+            "data": {
+                "platform": "apple"
+            },
+            "code": "error:device.smartphone.form.alias"
+        },
+        {
+            "name": "Platform inválido",
+            "data": {
+                "alias": "teste",
+                "platform": "x"
+            },
+            "code": "error:generic.platform"
+        },
+        {
+            "name": "Platform vazio",
+            "data": {
+                "alias": "teste"
+            },
+            "code": "error:generic.platform"
+        }
+    ]
+}

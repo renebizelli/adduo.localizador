@@ -1,0 +1,11 @@
+{
+    "fromAccount": "Foxtter <noreply@foxtter.com.br>",
+    "host": "mail.formigapedalboard.com.br",
+    "service": "",
+    "port": 587,
+    "secure": false,
+    "auth": {
+        "user": "postmaster@formigapedalboard.com.br",
+        "pass": "*m4Pag02#"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "nextter-38532": {
+        "client_id": "660572631800-2utv3v9kkrbmn7gkuuvhkgoupnmf782k.apps.googleusercontent.com",
+        "secret_key": "mzyz-xX0bTvGfBlRsxgT3_HT",
+        "redirect_url": "https://nextter-38532.firebaseapp.com/__/auth/handler",
+        "access_type": "offline",
+        "prompt": "consent",
+        "scope": ["https://www.googleapis.com/auth/androidpublisher"],
+        "code": "4/EAGt0cg0PVXj1TYe0SUw73b9rEepqGvRwNQsIgelY0D3fXx8QiYuNMwysJnx7ecCFRN6jg8Q-_RAKCftQw26Rjs",
+        "url_subscription": "http://localhost:1999/google/getsubscription",
+        "subscriptionName": "projects/nextter-38532/subscriptions/app"
+    },
+    "nextter-production": {
+        "client_id": "660572631800-2utv3v9kkrbmn7gkuuvhkgoupnmf782k.apps.googleusercontent.com",
+        "secret_key": "mzyz-xX0bTvGfBlRsxgT3_HT",
+        "redirect_url": "https://nextter-38532.firebaseapp.com/__/auth/handler",
+        "access_type": "offline",
+        "prompt": "consent",
+        "scope": ["https://www.googleapis.com/auth/androidpublisher"],
+        "code": "4/EAGt0cg0PVXj1TYe0SUw73b9rEepqGvRwNQsIgelY0D3fXx8QiYuNMwysJnx7ecCFRN6jg8Q-_RAKCftQw26Rjs",
+        "url_subscription": "https://www.googleapis.com/androidpublisher/v3/applications/{0}/purchases/subscriptions/{1}/tokens/{2}",
+        "subscriptionName": "projects/nextter-38532/subscriptions/app"
+    }
+}

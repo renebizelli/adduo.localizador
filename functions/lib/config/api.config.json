@@ -1,0 +1,16 @@
+{
+    "nextter-38532": {
+        "host": "https://us-central1-nextter-38532.cloudfunctions.net/app",
+        "hostx": "http://localhost:5000/nextter-38532/us-central1/app",
+        "version": "/api/v1"
+    },
+    "nextter-homologacao": {
+        "host": "https://us-central1-nextter-homologacao.cloudfunctions.net/app",
+        "hostx": "http://localhost:5000/nextter-homologacao/us-central1/app",
+        "version": "/api/v1"
+    },
+    "nextter-production": {
+        "host": "https://us-central1-nextter-production.cloudfunctions.net/app",
+        "version": "/api/v1"
+    }
+}

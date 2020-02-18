@@ -1,0 +1,8 @@
+- Mudar a propriedade currentSmartphone para:
+currentSmartphone : {
+    deviceId:string
+    platform:string
+}
+Motivador: para obtero token de push, hoje é necessario fazer join com Devices para obter a plataforma utilizada.
+
+- Varrer codigo e mudar nomes de propriedades de "location" para "point"

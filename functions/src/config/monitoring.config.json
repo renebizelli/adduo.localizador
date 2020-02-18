@@ -1,0 +1,5 @@
+{
+    "request-code-size" : 6,
+    "try-to-create-request-code" : 5,
+    "selected-locked-up-to-days" : 30
+}

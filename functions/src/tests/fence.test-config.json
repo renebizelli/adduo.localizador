@@ -1,0 +1,55 @@
+{
+    "name": "Cerca virtual",
+    "endpoint": "/restricted/fence",
+    "method": "POST",
+    "invalid-items": [
+        {
+            "name": "Título vazio",
+            "data": {},
+            "code": "error:fence.form.title"
+        },
+        {
+            "name": "Endereço vazio",
+            "data": {
+                "title": "Teste Chai"
+            },
+            "code": "error:fence.form.address"
+        },
+        {
+            "name": "Prioridade vazia",
+            "data": {
+                "title": "Teste Chai",
+                "address": "Rua Chai"
+            },
+            "code": "error:fence.form.priority"
+        },
+        {
+            "name": "Prioridade inválida",
+            "data": {
+                "title": "Teste Chai",
+                "address": "Rua Chai",
+                "priority": 99
+            },
+            "code": "error:fence.form.priority"
+        },
+        {
+            "name": "Raio vazio",
+            "data": {
+                "title": "Teste Chai",
+                "address": "Rua Chai",
+                "priority": 1
+            },
+            "code": "error:fence.form.radius"
+        },
+        {
+            "name": "Geo vazio",
+            "data": {
+                "title": "Teste Chai",
+                "address": "Rua Chai",
+                "priority": 1,
+                "radius" : 100
+            },
+            "code": "error:fence.form.location"
+        }   
+    ]
+}

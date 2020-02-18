@@ -1,0 +1,171 @@
+{
+    "_id" : "store",
+    "data" : {
+        "pt" : {
+            "monthly" : [ 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.one_person",
+                    "title" : "Licença mensal para 1 dispositivo",
+                    "description" : "Monitore 1 dispositivo em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.two_person",
+                    "title" : "Licença mensal para 2 dispositivos",
+                    "description" : "Monitore até 2 dispositivos em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.three_person",
+                    "title" : "Licença mensal para 3 dispositivos",
+                    "description" : "Monitore até 3 dispositivos em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.four_person",
+                    "title" : "Licença mensal para 4 dispositivos",
+                    "description" : "Monitore até 4 dispositivos em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.five_person",
+                    "title" : "Licença mensal para 5 dispositivos",
+                    "description" : "Monitore até 5 dispositivos em tempo real"
+                }
+            ],
+            "yearly" : [ 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.one_person",
+                    "title" : "Licença anual para 1 dispositivo",
+                    "description" : "Monitore 1 dispositivo em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.two_person",
+                    "title" : "Licença anual para 2 dispositivos",
+                    "description" : "Monitore até 2 dispositivos em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.three_person",
+                    "title" : "Licença anual para 3 dispositivos",
+                    "description" : "Monitore até 3 dispositivos em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.four_person",
+                    "title" : "Licença anual para 4 dispositivos",
+                    "description" : "Monitore até 4 dispositivos em tempo real"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.five_person",
+                    "title" : "Licença anual para 5 dispositivos",
+                    "description" : "Monitore até 5 dispositivos em tempo real"
+                }
+            ]
+        },
+        "en" : {
+            "monthly" : [ 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.one_person",
+                    "title" : "Monthly license for 1 device",
+                    "description" : "Accompany 1 device in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.two_person",
+                    "title" : "Monthly license for 2 devices",
+                    "description" : "Accompany up 2 devices in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.three_person",
+                    "title" : "Monthly license for 3 devices",
+                    "description" : "Accompany up to 3 devices in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.four_person",
+                    "title" : "Monthly license for 4 devices",
+                    "description" : "Accompany up to 4 devices in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.monthly.five_person",
+                    "title" : "Monthly license for 5 devices",
+                    "description" : "Accompany up to 5 devices in real time"
+                }
+            ],
+            "yearly" : [ 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.one_person",
+                    "title" : "Yearly license for 1 device",
+                    "description" : "Accompany 1 device in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.two_person",
+                    "title" : "Yearly license for 2 devices",
+                    "description" : "Accompany up 2 fives devices in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.three_person",
+                    "title" : "Yearly license for 3 devices",
+                    "description" : "Accompany up 3 fives devices in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.four_person",
+                    "title" : "Yearly license for 4 devices",
+                    "description" : "Accompany up 4 fives devices in real time"
+                }, 
+                {
+                    "sku" : "br.com.nextterdigital.foxtter.dev.yearly.five_person",
+                    "title" : "Yearly license for 5 devices",
+                    "description" : "Accompany up 5 fives devices in real time"
+                }
+            ]
+        },
+        "monthly" : [ 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.monthly.one_person",
+                "title" : "Licença mensal para 1 dispositivo",
+                "description" : "Monitore 1 dispositivo em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.monthly.two_person",
+                "title" : "Licença mensal para 2 dispositivos",
+                "description" : "Monitore até 2 dispositivos em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.monthly.three_person",
+                "title" : "Licença mensal para 3 dispositivos",
+                "description" : "Monitore até 3 dispositivos em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.monthly.four_person",
+                "title" : "Licença mensal para 4 dispositivos",
+                "description" : "Monitore até 4 dispositivos em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.monthly.five_person",
+                "title" : "Licença mensal para 5 dispositivos",
+                "description" : "Monitore até 5 dispositivos em tempo real"
+            }
+        ],
+        "yearly" : [ 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.yearly.one_person",
+                "title" : "Licença anual para 1 dispositivo",
+                "description" : "Monitore 1 dispositivo em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.yearly.two_person",
+                "title" : "Licença anual para 2 dispositivos",
+                "description" : "Monitore até 2 dispositivos em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.yearly.three_person",
+                "title" : "Licença anual para 3 dispositivos",
+                "description" : "Monitore até 3 dispositivos em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.yearly.four_person",
+                "title" : "Licença anual para 4 dispositivos",
+                "description" : "Monitore até 4 dispositivos em tempo real"
+            }, 
+            {
+                "sku" : "br.com.nextterdigital.foxtter.dev.yearly.five_person",
+                "title" : "Licença anual para 5 dispositivos",
+                "description" : "Monitore até 5 dispositivos em tempo real"
+            }
+        ]
+    }
+}

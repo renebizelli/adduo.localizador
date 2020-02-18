@@ -1,0 +1,20 @@
+{
+    "nextter-38532": {
+        "apiKey": "AIzaSyA6MoqQXGurNF5Z7ArRu4QjoGFaU1lbeWY",
+        "authDomain": "nextter-38532.firebaseapp.com",
+        "databaseURL": "nextter-38532.firebaseio.com",
+        "storageBucket": "nextter-38532.appspot.com"
+    },
+    "nextter-production": {
+        "apiKey": "AIzaSyBHRQkQxczw3lxHxI-JM2JXIOu4r0Zkrqk",
+        "authDomain": "nextter-production.firebaseapp.com",
+        "databaseURL": "nextter-production.firebaseio.com",
+        "storageBucket": "nextter-production.appspot.com"
+    },
+    "nextter-homologacao": {
+        "apiKey": "AIzaSyBvE8VMrFbfI0cbrxN2G0ZGsrb03YUu8_w",
+        "authDomain": "nextter-homologacao.firebaseapp.com",
+        "databaseURL": "nextter-homologacao.firebaseio.com",
+        "storageBucket": "nextter-homologacao.appspot.com"
+    }
+}

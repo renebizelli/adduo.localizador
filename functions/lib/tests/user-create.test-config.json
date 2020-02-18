@@ -1,0 +1,56 @@
+{
+    "name": "Criação de usuário",
+    "endpoint": "/public/users",
+    "method": "POST",
+    "invalid-items": [
+        {
+            "name": "Nome inválido",
+            "data": {},
+            "code": "error:user.form.name"
+        },
+        {
+            "name": "E-mail inválido",
+            "data": {
+                "name": "Teste de teste"
+            },
+            "code": "error:user.form.email"
+        },
+        {
+            "name": "Senha inválida",
+            "data": {
+                "name": "Teste de teste",
+                "email": "teste@teste.com"
+            },
+            "code": "error:user.form.password"
+        },
+        {
+            "name": "Cel inválido",
+            "data": {
+                "name": "Teste de teste",
+                "email": "teste@teste.com",
+                "phoneNumber": "11987"
+            },
+            "code": "error:user.form.phone"
+        },
+        {
+            "name": "Cell já cadastrado",
+            "data": {
+                "name": "Teste de teste",
+                "email": "teste@teste.com",
+                "password": "Nextter#123",
+                "phoneNumber": "11900000001"
+            },
+            "code": "error:user.form.phone-already-exists"
+        },
+        {
+            "name": "E-mail já cadastrado",
+            "data": {
+                "name": "Teste de teste",
+                "password": "Nextter#123",
+                "email": "teste@teste.com",
+                "phoneNumber": "11900000001"
+            },
+            "code": "error:user.form.email-already-exists"
+        }
+    ]
+}

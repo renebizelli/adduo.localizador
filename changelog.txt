@@ -1,0 +1,373 @@
+**Versão**: 1.5.0
+
+**Data**: 14/11/2019
+
+**Descrição** 
+
+* Funcionalidade de envio de e-mail (inicialmente email ao se cadastrar)
+
+***
+
+
+
+**Versão**: 1.4.2
+
+**Data**: 08/11/2019
+
+**Descrição** 
+
+* A geração do nó do usuário no Firebase passou a ser feito no Complement()
+
+***
+
+
+**Versão**: 1.4.1
+
+**Data**: 03/11/2019
+
+**Descrição** 
+
+* Mudança do termon "Foxtter Freemium" para "Foxtter Free"
+
+***
+
+
+**Versão**: 1.4.0
+
+**Data**: 01/11/2019
+
+**Descrição** 
+
+* Trava que impede um usuário de tornar selected um número maior de monitorados do que seu plano permite. 
+
+***
+
+
+**Versão**: 1.3.12
+
+**Data**: 31/10/2019
+
+**Descrição** 
+
+* Tratamento do campo "last_status", retornado pelo admin ao processar um recibo.
+
+***
+
+**Versão**: 1.3.11
+
+**Data**: 31/10/2019
+
+**Descrição** 
+
+* tornar todos monitorados como selected ao marcar o usuário como Free novamente.
+
+***
+
+**Versão**: 1.3.10
+
+**Data**: 30/10/2019
+
+**Descrição** 
+
+* Inclusão do endpoint que transforma a assinatura do usuário em Free novamente. (usada para testes)
+
+***
+
+**Versão**: 1.3.9
+
+**Data**: 29/10/2019
+
+**Descrição** 
+
+* Inclusão do campo VIP no Users, para liberar funcionalidades e não expirar usuários que sejam marcados como vip.
+
+***
+
+**Versão**: 1.3.8
+
+**Data**: 25/10/2019
+
+**Descrição** 
+
+* Inclusão do campo isProcessing no status da assinatura corrente do usuário.
+
+***
+
+
+**Versão**: 1.3.7
+
+**Data**: 24/10/2019
+
+**Descrição** 
+
+* Log de erros no push-service
+
+***
+
+**Versão**: 1.3.6
+
+**Data**: 21/10/2019
+
+**Descrição** 
+
+* Implementação de tentativa de encio de push em 5x, caso ocorra erro.
+
+***
+
+**Versão**: 1.3.4
+
+**Data**: 17/10/2019
+
+**Descrição** 
+
+* Ajuste no calculo de dias restantes do plano free.
+
+***
+**Versão**: 1.3.5
+
+**Data**: 21/10/2019
+
+**Descrição** 
+
+* Retorno da propriedade purchased no response com a lista de planos, marcando a assianatura atual.
+* Mudança do conteudo do Enum notificationTypesString.countdownFreeUser de 'countdownFreeUser' para 'countdown-free-user'.
+***
+
+**Versão**: 1.3.4
+
+**Data**: 17/10/2019
+
+**Descrição** 
+
+* Ajuste no calculo de dias restantes do plano free.
+
+***
+
+
+**Versão**: 1.3.3
+
+**Data**: 17/10/2019
+
+**Descrição** 
+
+* Ajuste na conversão de datas dos recibos, vindos do admin.
+
+***
+
+**Versão**: 1.3.2
+
+**Data**: 16/10/2019
+
+**Descrição** 
+
+* Inclusão do campo daysLeft no retorno da assinatura atual, indicando quantos dias restam para o plano expirar.
+
+***
+
+**Versão**: 1.3.0
+
+**Data**: 15/10/2019
+
+**Descrição** 
+
+* Inclusão de trava (retorna 402) nos endpoints que exigem que o usuário tenha uma assinatura válida.
+
+
+***
+
+**Versão**: 1.2.4
+
+**Data**: 14/10/2019
+
+**Descrição** 
+
+* Correção de texto de alerta de saída de área de clima severo.
+* Endpoint para obter dados da API. { version: 0.0.0 }
+
+***
+
+**Versão**: 1.2.3
+
+**Data**: 10/10/2019
+
+**Descrição** 
+
+* Log registrando o id e o tipo da entidade que deu erro;
+* Registrando tentativas de envios e erros ao ocorrer erro no envio de recibo para o Admin;
+
+***
+
+**Versão**: 1.2.2
+
+**Data**: 08/10/2019
+
+**Descrição** 
+
+* [bug fix] Ajuste no countdown de user free;
+
+***
+
+**Versão**: 1.2.1
+
+**Data**: 02/10/2019
+
+**Descrição** 
+
+* [bug fix] Ao trocar de produto (sku), limpar todos os usuários selected.
+
+***
+
+**Versão**: 1.2.0
+
+**Data**: 30/09/2019
+
+**Descrição** 
+
+* [new] Endpoint para obter conteúdos, inicialmente os banners da home.
+
+***
+
+**Versão**: 1.1.9
+
+**Data**: 27/09/2019
+
+**Descrição** 
+
+* [bug fix] Correção no tipo de alerta para weather, propriedade type="weather".
+
+***
+
+**Versão**: 1.1.8
+
+**Data**: 27/09/2019
+
+**Descrição** 
+
+* [bug fix] Prioridade de alerta de clima definido como default.
+
+***
+
+**Versão**: 1.1.7
+
+**Data**: 26/09/2019
+
+**Descrição** 
+
+* Inclusão da descriçã do produto no retorno da assinatura corrente do usuário
+
+***
+
+**Versão**: 1.1.6
+
+**Data**: 26/09/2019
+
+**Descrição** 
+
+* Diferenciação dos DTOs de device, entre Iot e Smartphone;
+* Houve mudança na regra do Firebase para ler o nó devices, agora o dono do device tem permissão.
+* Cadastro de IOT, com inclusão na propriedade de monitoring, do usuário
+
+***
+
+**Versão**: 1.1.5
+
+**Data**: 20/09/2019
+
+**Descrição** 
+
+* [bug fix] Verificação de campo purchased da lista de produtos não considerava o status da assinatura do usuário.
+
+***
+
+**Versão**: 1.1.4
+
+**Data**: 19/09/2019
+
+**Descrição** 
+
+* Inclusão da propriedade purchased na lista de produtos do store, marcando o produto corrente do usuário
+
+***
+
+**Versão**: 1.1.3
+
+**Data**: 19/09/2019
+
+**Descrição** 
+
+* Inclusão da versão da API nos responses.
+
+***
+
+**Versão**: 1.1.2
+
+**Data**: 18/09/2019
+
+**Descrição** 
+
+* Inicio da implementação de device IOT (separação dos deviceServices).
+* Inclusão de fake de recebimento de recibo por Android.
+
+***
+
+**Versão**: 1.1.1
+
+**Data**: 18/09/2019
+
+**Descrição** 
+
+* [bug fix] Ao parsear o XML no INMET, estava tratando como JSON.
+
+***
+
+**Versão**: 1.1.0
+
+**Data**: 16/09/2019
+
+**Descrição** 
+
+* Mudança do nome do enum de alertPriority para alertPriority,
+* Inclusão de parâmetros no banco de dados,
+* Exclusão do arquivo de config subscription.config.json, substituído pelo novo esquema de parâmetros,
+* Inclusão da rotina de envio de avisos de dias restantes de assinatura free,
+* Alteração do endpoint '/private/subscription/process-users' para '/private/subscription/process-overdue-users',
+* Usuário free expirado passa a ter o lastStatus = 'expired'
+
+***
+
+**Versão**: 1.0.2
+
+**Data**: 04/09/2019
+
+**Descrição** 
+
+* Alteração do método throwBadRequestIfNameInvalid para throwBadRequestIfInvalidName do validatorHelper.
+* Alteração do método throwBadRequestIfEmailInvalid para throwBadRequestIfInvalidEmail do validatorHelper.
+* Alteração do método throwBadRequestIfGeoPointInvalid para throwBadRequestIfInvalidGeoPoint do validatorHelper.
+* Inclusão dos metodos throwBadRequestIfNotEnoughLength e throwBadRequestIfInvalidPhone em validatorHelper.
+* Inclusão de validação de número de celular, caso algum número sera informado.
+* Alterações em chaves das traduções para erros de cadastro de usuário.
+* Início da inclusão de testes.
+* inclusão no detalhe de cerca o campo numberOfMonitoreds.
+* Inclusão do campo Status na propriedade Monitored (inside, outside, near e none) nas respostas de cerca.
+* [bug fix] Edição do e-mail do usuário estava salvando informação em .info, não em .contact.
+* [bug fix] Edição do phone do usuário não estava sendo gravada no MongoDb.
+* Inclusão de tradução de planos, dos enpoints de home e store.
+
+***
+
+**Versão**: 1.0.1
+
+**Data**: 03/09/2019
+
+**Descrição** 
+
+* Ajuste na simulação de assinaturas. 
+
+***
+
+**Versão**: 1.0.0
+
+**Data**: 01/01/2019
+
+**Descrição**: início do changelog.

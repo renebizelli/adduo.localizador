@@ -1,0 +1,567 @@
+<pre>
+
+    <h1>Complementar registro do usuário<br>quando logado por qualquer provider</h1>
+    POST /restricted/users/complement
+    Request: 
+        header: 
+            - Authorization: token
+            - ts: 'auth'
+            - Accept-Language: en | pt
+    Body: vazio
+    Response : http status  200
+
+    <hr />
+    
+    <h1>Ativar device do usuário logado</h1>
+    POST /restricted/device/smartphone
+    
+    Obs: No Response não há mais uuid, agora é _id (_id é gerado pelo mongodb).
+    
+    Request:
+        {
+            "alias" : "nome do seu cell",
+            "platform" : "android|ios"
+        }
+    
+    Response:
+        {
+            "deviceId": "5c1d39778554a9095c32a227",
+            "userUid": "d0RI3grmQpaYZRkQ1QyfGttCTD52",
+            "alias": "nome do seu cell",
+            "type": "smartphone",
+            "detail": {
+                "platform": "ios"
+            },
+            "createdAt": "2018-12-21T19:05:27.486Z",
+            "updatedAt": "2018-12-21T19:05:27.486Z",
+            "__v": 0
+        }
+    
+    <hr />
+    
+    <h1>Setup</h1>
+    Esse endpoint deve ser chamado sempre que um login é efetuado.
+    - Caso já exista um deviceId (_id do response acima), chamar este endpoint com o Request detalhado abaixo;
+    - Caso não exista deviceId, passar pelo passo de ativação de device;
+    - É esse endpoint que devolve o ts, que será passado "toda vida" pelo header nas chamadas.
+    
+    POST /restricted/session/setup
+    
+    Request: 
+        header: 
+            - Authorization: token
+            - ts: 'auth'
+            - Accept-Language: en | pt
+    
+        body: 
+        {
+            "deviceId" : "5c1a8fc908f9fd0002682e72",
+            "platform" : "apple|google"
+        }    
+    
+    Response:
+        {
+            "deviceId": "5c1a865b6aa21c0002309680",
+            "uid": "clxTyyIi4bNabwRVOOgFwodoach1",
+            "culture": "pt",
+            "ts": 1545419830222
+        }    
+    
+    
+    <hr />
+    
+    <h1>Logout</h1>
+    Registra no back-end que o usuário efetuou o logout
+    
+    PUT /restricted/session/logout
+    
+    Response: Http 200
+    
+    <hr />
+    
+    <h1>Obter código de solicitação de acompanhamento</h1>
+    GET /restricted/monitoring/code
+    
+    Response:
+        {
+            "code": "WPLQVU"
+        }
+    
+    <hr />
+    
+    <h1>Alterar idioma do usuário</h1>
+ 
+    PUT /restricted/users/culture
+    
+    header:
+        {
+            "Accept-Language": "pt|en"
+        }
+    
+    <hr />
+    
+    <h1>Obter optIn</h1>
+    GET /restricted/monitoring/optin/5xz9xi
+    
+    Obs: 5xz9xi -> codigo
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+    
+    Response: 
+        {
+            "text": "(en) Você esta permitindo que Jhonathan Wyterlin dol..."
+        }
+    
+    <hr />
+        
+    <h1>Aceitar acompanhamento</h1>
+    POST /restricted/monitoring/accept/
+    
+    Request : 
+    {
+        code : '5xz9xi'
+    }
+    
+    Response: 
+        {
+            "nameUserAllowed": "Nome do usuário permitido"
+        }
+    
+
+    <hr />
+    
+    <h1>Lista de pessoas que permitiram serem<br>acompanhadas</h1>
+    GET /restricted/monitoring/monitorable
+
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+    
+    - monitorable -> lista de pessoas que aceitaram ser acompanhadas;
+    - selected -> indica que a pessoa foi vinculada a uma licença;
+    - licences -> quantidade de licenças que o usuário possui;
+    - canBeChanged -> true|false - indica se o monitorado pode ser 
+                      trocado por outro, depois do periodo de X dias.  
+    - daysLeft -> número de dias restantes para a liberação do usuário
+                  para troca por outro usuário;
+    Response : 
+    {
+        "monitorable": [
+            {
+                "monitorableUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+                "userUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+                "deviceId": "5d5fef439e45ef0002ae8e05",
+                "alias": "Nome do usuário",
+                "selected": true,
+                "contact": {
+                    "email": "rene@nextter.com.br",
+                    "cellPhone": "+5511973017320"
+                },
+                "daysLeft": 0,
+                "canBeChanged": false
+            },
+        ],
+        "licenses": 3
+    }
+
+    <hr />
+    
+    <h1>Vincula um monitorado a uma licença </h1>
+    PUT /restricted/monitoring/selected/UID
+    
+    Obs: 
+    - Retorna 402 se assinatura estiver inativa (active = false);
+    - Utilizado na tela Minha Conta
+    
+    Response: Http 200
+    
+    <hr />
+    
+    <h1>Lista de usuários para exibição no mapa</h1>
+    GET /restricted/monitoring/selected-to-map
+    
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+
+    - monitorableUid (ou userUid, depreciado) - UID do monitorado.
+
+    Response:
+    [
+        {
+            "monitorableUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+            "userUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+            "deviceId": "5d5fef439e45ef0002ae8e05",
+            "alias": "Nome do usuário",
+            "contact": {
+                "email": "rene@nextter.com.br",
+                "cellPhone": "+5511973017320"
+            } 
+        }
+    ]
+
+    <hr />
+
+    <h1>Lista de usuários vinculados a licenças </h1>
+    GET /restricted/monitoring/selected-to-account
+
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+    
+    - monitorableUid (ou userUid, depreciado) - UID do monitorado.
+    - canBeChanged -> true|false - indica se o monitorado pode ser trocado por outro, depois do periodo de X dias.  
+    - daysLeft -> número de dias restantes para a liberação do usuário para trocar por outro usuário;
+
+    Response:
+    [
+        {
+            "monitorableUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+            "userUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+            "alias": "Nome do usuário" 
+            "daysLeft": 30,
+            "canBeChanged": false
+        }
+    ]
+
+    <hr />
+
+    <h1>Lista de usuários não vinculados a licenças </h1>
+    GET /restricted/monitoring/unselected/
+    
+    - monitorableUid - UID do monitorado.
+
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+
+    Response:
+    [
+        {
+            "monitorableUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+            "alias": "Nome do usuário"
+        }
+    ]
+
+    <hr />
+
+    <h1>Desvincular usuário de uma licenças </h1>
+    DELETE /restricted/monitoring/selected/UID
+    
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+
+    Response: Http 200
+
+    <hr />
+    
+    <h1>Atualizar monitorado</h1>
+    PUT /restricted/monitoring/monitorable/UID
+    
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+
+    Request:
+    {
+        alias": "Rene Oliveira"
+    }
+    
+    Response: http 200
+    
+    <hr />
+    
+    <h1>Deletar monitorado</h1>
+    DELETE /restricted/monitoring/monitorable/{UID}
+    
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+    
+    Response: http 200
+    
+    <hr />
+
+    <h1>Criar cerca</h1>
+    POST /restricted/fence/
+    
+    Obs:  
+    - priority: 1 normal, 8 crítica
+    - Retorna 402 se assinatura estiver inativa (active = false);
+    
+    Request:
+    {
+      "lat" :-24.545288,   
+      "lng" : -48.641634,
+      "radius" : 1000,
+      "title" : "Teste de cerca",
+      "address" : "Rua Sete de Abril, 296...",
+      "priority" : 1 | 8,    
+      "monitoredIds" : ["clxTyyIi4bNabwRVOOgFwodoach1"]  -> lista de userUid que serão acompanhados
+    }
+    
+    Response : 
+    {
+        "_id": "5d6055d96d43b20002e877fc",
+        "location": {
+            "lat": -23.545288,
+            "lng": -46.641634
+        },
+        "lat": -23.545288,
+        "lng": -46.641634,
+        "userUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+        "radius" : 1000,
+        "title" : "Teste de cerca",
+        "address" : "Rua Sete de Abril, 296...",
+        "active": true,
+        "createdAt": 1566594521482,
+        "numberOfMonitoreds": 1
+    }    
+    
+    <hr />
+    
+    <h1>Editar cerca</h1>
+    PUT /restricted/fence/{UID}
+    
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+    
+    Request:
+    {
+      "lat" :-24.545288,   
+      "lng" : -48.641634,
+      "radius" : 1000,
+      "priority" : 1,  
+      "address" : "Rua Sete de Abril, 296...",
+      "title" : "Teste de cerca Alterada",
+       "monitoredIds" : ["98FVanFh60cL2QR6EqaUc42y7zj1", "mB9Tda2JFoT7QhGytOWnQPSV9Xn2", "z9OIQbmnkJaeVPH2HK94XhNZ88C2"]
+    }
+    
+    <hr />
+    
+    <h1>Lista das cerca</h1>
+    GET /restricted/fences
+    
+    Obs:  
+    - Retorna 402 se assinatura estiver inativa (active = false);
+    
+    Response : 
+    [
+        {
+            "_id": "5d39ae74cbd27e0002b6e743",
+            "location": {
+                "lat": -23.582905,
+                "lng": -46.582074
+            },
+            "lat": -23.582905,
+            "lng": -46.582074,
+            "radius": 129,
+            "priority": 8,
+            "address": "Rua Ettore Ximenes, 238",
+            "title": "Unique alt",
+            "createdAt": 1564061300500,
+            "numberOfMonitoreds": 2
+        }
+    ]
+    
+    <hr />
+    
+    <h1>Detalhes de uma cerca</h1>
+    GET /restricted/fence/{UID}
+    
+    Obs: Retorna 402 se assinatura estiver inativa (active = false);
+    
+    Response:
+    {
+        "_id": "5d39ae74cbd27e0002b6e743",
+        "location": {
+            "lat": -23.582905,
+            "lng": -46.582074
+        },
+        "lat": -23.582905,
+        "lng": -46.582074,
+        "radius": 129,
+        "priority": 8,
+        "userUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+        "address": "Rua Ettore Ximenes, 238",
+        "title": "Unique alt",
+        "createdAt": 1564061300500,
+        "monitoredIds": [
+            "QgLU31dTdwXiMUwvUP3L5NXC2zx2"
+        ],
+        "monitored": [
+            {
+                "userUid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+                "uid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+                "alias": "Nome do usuário"
+            }
+        ]
+    }  
+
+    
+    <hr />
+    
+    <h1>Subscription - Home</h1>
+    GET /restricted/products/home
+    
+    Response:
+    {
+        "title": "Foxtter Premium",
+        "description": "",
+        "img": "http://....05.jpg",
+        "features": [
+            {
+                "title": "Cerca virtual",
+                "description": "Crie muitas....",
+                "img": "XX"
+            }
+        ]
+    }    
+
+    <hr />
+
+    <h1>Subscription - Store</h1>
+    GET /restricted/products/store
+    Response:
+    {
+        monthly : 
+        [
+            {
+                "sku": "br.com.nextterdigital.foxtter.one_person",
+                "title": "Licença para 1 dispositivo",
+                "description": "Monitore até 1 dispositivo em tempo real",
+                "purchased" : false
+            }
+        ],
+        yearly: 
+        [
+            {
+                "sku": "br.com.nextterdigital.foxtter.one_person",
+                "title": "Licença para 1 dispositivo",
+                "description": "Monitore até 1 dispositivo em tempo real",
+                "purchased" : false
+            }
+        ]
+
+    <hr />
+     
+    <h1>Atualizar token para push</h1>
+    GET /restricted/push/refreshtoken
+    
+    Request:
+    {
+      "token" : "1asdfsdfsdfsdf"
+    }
+    
+    Response: http 200
+    
+    <hr />
+    
+    <h1>Deletar photo</h1>
+    DELETE /restricted/users/photo
+    
+    Response: http 200
+    
+    <hr />
+    
+    <h1>Obtem dados da assinatura</h1>
+
+    GET /restricted/subscription
+
+    ** em estudo, mas sera algo be parecido com isso;
+    subscriptionType -> Pode ser "yearly" ou "monthly"
+
+    response : {
+        "active": true,
+        "needsToFix": true,
+        "status": "Ativo",
+        "numberOfLicenses": 3,
+        "title": "Foxtter Premium",
+        "subscriptionType": "yearly",
+        "sku" : "br.com.nextterdigital.foxtter.dev.yearly.four_person", 
+        "isFree": false,
+        "description": "Accompany up 2 devices in real time",
+        "daysLeft" : 9,
+        "isProcessing" : false
+    }
+
+    <hr />
+
+    <h1>Envio de recibo da loja</h1>
+
+    POST /restricted/subscription/receipt/transactionId
+
+    Obs: transactionId é o transactionId da transação, não é o OriginalTransactionId.
+
+    request : objeto recibo da loja
+
+    Esse endpoint deve ser usado sempre que houver alteração na assinatura do usuário, para atualizar a situação localmente.
+    O nó <b>users/uid/changing/subscription</b> do firebase é alterado sempre que houver tais mudanças.
+    
+    <hr />
+
+    <h1>Recebimento do recibo processado pelo Admin</h1>
+
+    PUT /private/subscription/receipt/processed/
+
+    request : {
+        "uid": "QgLU31dTdwXiMUwvUP3L5NXC2zx2",
+        "subscriptionId": "10000020190823-0X",
+        "transactionId": "10000020190823-0X",
+        "active": true,
+        "lastStatus": "subscribed",
+        "startTime": 111,
+        "expiryTime": 222,
+        "resumeTime": 0,
+        "product": {
+            "id": "br.com.nextterdigital.foxtter.hom.threePerson",
+            "name": "Licenças",
+            "licenses": 3
+        }
+    }
+
+    Response http 200
+
+    <hr />
+
+    <h1>Objeto de envio do recibo ao admin</h1>
+
+    {
+        uid: "",
+        name : "",
+        email : "",
+            transactionId: "",
+            platform: "apple|google",
+            data: {}
+    }
+
+    <hr />
+
+    <h1>Obter banners da home</h1>
+
+    GET /restricted/content/banner-home
+
+        "img": "",     --> url da imagem
+        "link": true,  --> Se o banner possui algum tipo de link
+        "externalUrl": true,  --> Se o link é externo (true) ou interno (false)
+        "url": "http://www.foxtter.com.br"   -> URL do link: externo (www...) ou interno  (a combinar)
+
+    response : 
+    [
+       {
+        "img": "",      
+        "link": true,   
+        "externalUrl": true,  
+        "url": "http://www.foxtter.com.br"   
+       }
+   ]
+
+    <hr />
+
+    <h1>informações API</h1>
+
+    GET /restricted/info/api
+
+    response : 
+       {
+        "version": "0.0.0"      
+       }
+
+
+    <hr />
+
+
+
+    <h1>Lembretes:</h1>
+    
+    Não esqueçam de ficarem ouvindo o nó "users/0GYfGE8kpran5UOBZgsLKuZIrzk1/currentSmartphone" quando esativerem acompanhando algum usuário no mapa.
+    Se a pessoa assistida mudar de cel, esse nó que avisa o _id do novo device.
+    
+    Obs: 0GYfGE8kpran5UOBZgsLKuZIrzk1 é o userUid da pessoa assistida;
+    
+    </pre>

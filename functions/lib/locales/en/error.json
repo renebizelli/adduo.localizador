@@ -1,0 +1,104 @@
+{
+    "unprocessable": "Request could not be processed.",
+    "generic": {
+        "device": "The deviceId information is required.",
+        "fence": "The fenceId information is required.",
+        "position": "The Lat and Long information are required",
+        "uid": "The uid information is required.",
+        "user-not-found": "User not found",
+        "id": "The id information is required.",
+        "platform": "The platform information is required. (apple|google)",
+        "parse-xml-json": "XML parse error for json",
+        "monitorable-uid": "The monitorableUid information is required."
+    },
+    "fence": {
+        "form": {
+            "title": "Enter virtual fence title",
+            "address": "Enter virtual fence address",
+            "priority": "Choice the virtual fence priority.",
+            "radius": "Choice the virtual fence size",
+            "location": "Enter virtual fence location",
+            "lat": "Enter virtual fence valid location",
+            "lng": "Enter virtual fence valid location"
+        },
+        "not-found": "Virtual fence not found"
+    },
+    "user": {
+        "form": {
+            "name": "Enter full name",
+            "email": "Enter valid e-mail account",
+            "password": "The password is not strong enough.",
+            "confirm-password": "Confirm password isn't as same as password.",
+            "phone": "Enter valid phone number.",
+            "phone-already-exists": "The user with the provided phone number already exists.",
+            "email-already-exists": "The email address is already in use by another account.",
+            "invalid-disabled-field": "The disabled field must be a boolean."
+        },
+        "notFound": "This user does not exist in the records.",
+        "changedCultureError": "Enter valid culture (pt|en)",
+        "changePasswordNotConfirm": "The password dont't was confirmed",
+        "changePasswordMissInformation": "Please, enter the new password and confirmation",
+        "changePasswordInvalidCode": "The action code is invalid. This can happen if the code is malformed, expired, or has already been used.",
+        "userUidIsRequired": "uidUsers is required"
+    },
+    "location": {
+        "accuracy": "The Accuracy information is required.",
+        "altitude": "The Altitude information is required.",
+        "direction": "The Direction information is required.",
+        "speed": "The Speed information is required.",
+        "accuracy-state": "The AccuracyState information is required.",
+        "battery": "The Battery information is required.",
+        "type": "The type information is required (for Iots). (status|position)"
+    },
+    "auth": {
+        "tokenNotFound": "Authorization token not found.",
+        "invalid-auth": "Invalid e-mail or password.",
+        "token": "The Token information is required.",
+        "setup": {
+            "deviceId": "The deviceId information is required."
+        }
+    },
+    "device": {
+        "smartphone": {
+            "form": {
+                "alias": "The alias information is required."
+            },
+            "battery": "Enter numéric value for battery",
+            "gps": "Enter value GPS",
+            "not-found": "Device not found."
+        },
+        "iot": {
+            "form": {
+                "empty-alias": "The Name information is required.",
+                "empty-externalId": "Enter externalId for this device. (Id of maker)",
+                "invalid-token": "The token typed is invalid",
+                "empty-token": "Enter token for this device."
+            },
+            "admin": {
+                "invalid-data": "Invalid Iot data",
+                "activation-error": "Error in activation"
+            }
+        }
+    },
+    "monitoring": {
+        "form": {
+            "alias": "Enter name for this user.",
+            "uid": "The uid information is required."
+        },
+        "request-code-is-required": "A access request cod to localization is required.",
+        "request-code-invalid": "Access request code is invalid.",
+        "request-accept-conflit": "You've already allowed that {rene} has access your localization data.",
+        "monitoring-bad-request": "The monitoredUserUid and allowedUserUid information are required.",
+        "allowed-bad-request": "The monitoredUserUid information is required.",
+        "selected-save-bad-request": "Choose at least one of users.",
+        "selected-save-exceeded": "Selected quantity exceeded"
+    },
+    "alert": {
+        "error": "Insertion alert error"
+    },
+    "subscription": {
+        "receipt": {
+            "id-invalid": "Transaction id invalid"
+        }
+    }
+}

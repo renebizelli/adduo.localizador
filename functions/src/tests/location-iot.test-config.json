@@ -1,0 +1,23 @@
+{
+    "name" : "Localização de IOT",
+    "endpoint": "/restricted/location/{0}",
+    "method" : "PUT",
+    "invalid-items": [
+        {
+            "name": "Geo vazio",
+            "data": {
+                "type" : "position"
+            },
+            "code": "error:generic.position"
+        },
+        {
+            "name": "Geo inválido",
+            "data": {
+                "type" : "position",
+                "lat" : -23.123,
+                "lng" : -46.123
+            },
+            "code": "error:location.accuracy-state"
+        }
+    ]
+}

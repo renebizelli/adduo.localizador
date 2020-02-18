@@ -1,0 +1,14 @@
+{
+    "nextter-38532": {
+        "minimumAllowedTimeForUpdateLocation": 5,
+        "maxAccuracyAllowedInmeters": 50
+    },
+    "nextter-homologacao": {
+        "minimumAllowedTimeForUpdateLocation": 5,
+        "maxAccuracyAllowedInmeters": 50
+    },
+    "nextter-production": {
+        "minimumAllowedTimeForUpdateLocation": 5,
+        "maxAccuracyAllowedInmeters": 50
+    }
+}

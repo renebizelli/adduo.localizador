@@ -1,0 +1,12 @@
+{
+    "name": "Atualização de Alias",
+    "endpoint": "/restricted/monitoring/monitorable/{0}",
+    "method" : "PUT",
+    "invalid-items": [
+        {
+            "name": "Alias vazio",
+            "data": {},
+            "code": "error:monitoring.form.alias"
+        }
+    ]
+}

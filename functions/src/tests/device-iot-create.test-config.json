@@ -1,0 +1,40 @@
+{
+    "name": "Device",
+    "endpoint": "/restricted/device/iot",
+    "method": "POST",
+    "invalid-items": [
+        {
+            "name": "Alias vazio",
+            "data": {
+                "externalId": "sd4fsd65f4ds",
+                "token": "4345245234523452345"
+            },
+            "code": "error:device.iot.form.empty-alias"
+        },
+        {
+            "name": "externalId vazio",
+            "data": {
+                "alias": "IOT TEst",
+                "token": "4345245234523452345"
+            },
+            "code": "error:device.iot.form.empty-externalId"
+        },
+        {
+            "name": "token vazio",
+            "data": {
+                "alias": "IOT TEst",
+                "externalId": "sd4fsd65f4ds"
+            },
+            "code": "error:device.iot.form.empty-token"
+        },
+        {
+            "name": "token inválido",
+            "data": {
+                "alias": "IOT TEst",
+                "externalId": "sd4fsd65f4ds",
+                "token": "erro-validation"
+            },
+            "code": "error:device.iot.admin.invalid-data"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "xurl": "https://us-central1-nextter-38532.cloudfunctions.net/app/api/v1",
+    "xxurl": "http://localhost:5000/nextter-38532/us-central1/app/api/v1",
+    "url": "https://us-central1-nextter-production.cloudfunctions.net/app/api/v1",
+    "test": {
+        "mode": "full"
+    },
+    "waitingToTriggerSeconds": 10
+}

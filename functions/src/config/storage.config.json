@@ -1,0 +1,17 @@
+{
+    "nextter-38532": {
+        "host": "http://storage.cloud.google.com/nextter-38532",
+        "profile_folder": "profile",
+        "bucket": "nextter-38532"
+    },
+    "nextter-homologacao": {
+        "host": "http://storage.cloud.google.com/nextter-homologacao",
+        "profile_folder": "profile",
+        "bucket": "nextter-homologacao"
+    },
+    "nextter-production": {
+        "host": "http://storage.cloud.google.com/nextter-production",
+        "profile_folder": "profile",
+        "bucket": "nextter-production"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "nextter-38532": {
+        "connection": "mongodb://nextter:Test123@ds133659.mlab.com:33659/nextter"
+    },
+    "nextter-homologacao": {
+        "connection": "mongodb://nextter:mTe7pbPA3I7xA9Ub0Kr7@34.73.166.244:27017/nextter"
+    },
+    "nextter-production": {
+        "connection": "mongodb://nextter:mTe7pbPA3I7xA9Ub0Kr7@34.73.166.244:27017/nextter",
+        "xconnection": "mongodb://nextter:<ZLGx4Dw8JeaYMJ{@mongodb.nextter.com.br:27017/nextter"
+    }
+}

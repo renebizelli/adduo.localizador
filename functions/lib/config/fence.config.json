@@ -1,0 +1,17 @@
+{
+    "nextter-38532": {
+        "proximity": 100,
+        "marginOfError": 1.3,
+        "minutesForNextProcess": 0
+    },
+    "nextter-homologacao": {
+        "proximity": 100,
+        "marginOfError": 1.3,
+        "minutesForNextProcess": 3
+    },
+    "nextter-production": {
+        "proximity": 100,
+        "marginOfError": 1.3,
+        "minutesForNextProcess": 3
+    }
+}

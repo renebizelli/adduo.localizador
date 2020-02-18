@@ -1,0 +1,62 @@
+{
+    "new-password-requested": "Enviamos um e-mail para você definir uma nova senha.",
+    "opt-in": "Você permite que {name} tenha acesso a sua localização?",
+    "fence": {
+        "status": {
+            "title": "Aviso de cerca",
+            "body": {
+                "outside": "{name} está fora da cerca virtual {0}.",
+                "inside": "{name} está dentro da cerca virtual {0}.",
+                "near": "{name} está perto da cerca virtual {0}."
+            }
+        }
+    },
+    "weather": {
+        "alert": {
+            "title": "Aviso de clima",
+            "body": {
+                "monitorable": {
+                    "outside": "{name} está fora da área de risco. Fonte: INMET",
+                    "inside": {
+                        "chuvas-intensas": "{name} está em uma área de risco de fortes chuvas. Fonte: INMET",
+                        "tempestade": "{name} está em uma área de risco de tempestade. Fonte: INMET"
+                    }
+                },
+                "one-self": {
+                    "outside": "Você está fora da área de risco. Fonte: INMET",
+                    "inside": {
+                        "chuvas-intensas": "Você está em uma área de risco de fortes chuvas. Fonte: INMET",
+                        "tempestade": "Você está em uma área de risco de tempestade. Fonte: INMET"
+                    }
+                }
+            }
+        }
+    },
+    "accept": {
+        "title": "Seu permissão para localização foi aceito",
+        "body": "{name} aceitou seu pedido de permissão para localiza-lo(a) no mapa."
+    },
+    "countdown-free-user": {
+        "title": "Aviso",
+        "body": "O período grátis do Foxtter vai acabar em {0} dias."
+    },
+    "plan-user-expired": {
+        "title": "Aviso",
+        "body": "O período grátis do Foxtter acabou. Assine um dos nossos planos e continue utilizando o aplicativo."
+    },
+    "subscription": {
+        "description-product-single": "Monitore um dispositivo em tempo real",
+        "description-product-plural": "Monitore até {0} dispositivos em tempo real",
+        "status": {
+            "status-0": "Pendente",
+            "status-1": "Ativo",
+            "status-2": "Cancelado"
+        }
+    },
+    "email": {
+        "register": {
+            "title": "[Foxtter] Hi ",
+            "message": "Hi {0}, <br /><br />You've done your registered in Foxtter"
+        }
+    }
+}

@@ -1,0 +1,3 @@
+- renomear propriedade ("users").monitoring.users[] para("users").monitoring.monitorable[] 
+- ao remover um monitorable, deletar o registro do monitorin.users, pois o historico guarda os eventos. Além disso, matar o campo active do monitorting.users[]
+

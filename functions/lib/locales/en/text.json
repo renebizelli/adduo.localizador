@@ -1,0 +1,62 @@
+{
+    "new-password-requested": "We sent an email to set a new password",
+    "opt-in": "Do you allow who {name} to follow your location?",
+    "fence": {
+        "status": {
+            "title": "Alert of fence",
+            "body": {
+                "outside": "{name} is outside the {0} fence.",
+                "inside": "{name} is inside the {0} fence.",
+                "near": "{name} is close to the {0} fence."
+            }
+        }
+    },
+    "weather": {
+        "alert": {
+            "title": "Weather alert",
+            "body": {
+                "monitorable": {
+                    "outside": "{name} is outside of risk area. Source: INMET",
+                    "inside": {
+                        "chuvas-intensas": "{name} is inside the area of Heavy rains. Source: INMET",
+                        "tempestade": "{name} is inside the area of Storm. Source: INMET"
+                    }
+                },
+                "one-self": {
+                    "outside": "You are outside of risk area. Source: INMET",
+                    "inside": {
+                        "chuvas-intensas": "You are is inside the area of Heavy rains. Source: INMET",
+                        "tempestade": "You are is inside the area of Storm. Source: INMET"
+                    }
+                }
+            }
+        }
+    },
+    "accept": {
+        "title": "Your location permission was accepted",
+        "body": "{name} has allowed you to have access to location data."
+    },
+    "countdown-free-user": {
+        "title": "Alert",
+        "body": "Foxtter's free period will end in {0} days"
+    },
+    "plan-user-expired": {
+        "title": "Alert",
+        "body": "Foxtter's free period is over. Subscribe to one of our plans and keep using the app."
+    },
+    "subscription": {
+        "description-product-single": "Accompany 1 device in real time",
+        "description-product-plural": "Accompany up {0} devices in real time",
+        "status": {
+            "status-0": "Pending",
+            "status-1": "Active",
+            "status-2": "Cancel"
+        }
+    },
+    "email": {
+        "register": {
+            "title": "[Foxtter] Olá ",
+            "message": "Olá {0}, <br /><br />Você se cadastrou no Foxtter"
+        }
+    }
+}

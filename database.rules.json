@@ -1,0 +1,32 @@
+{
+  "rules": {
+    "alerts": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "auth.uid !== null"
+      }
+    },
+    "devices": {
+      "$deviceId": {
+        ".read": "root.child('users').child(data.child('userUid').val()).child('authorized').hasChild(auth.uid) || data.child('userUid').val() == auth.uid",
+        ".write": "auth.uid !== null"
+      }
+    },
+    "fences": {
+      "$deviceId": {
+        ".read": false,
+        ".write": false
+      }
+    },
+    "client_connections": {
+      ".read": true,
+      ".write": true
+    },
+    "users": {
+      "$userUid": {
+        ".read": "data.child('authorized').hasChild(auth.uid) || $userUid == auth.uid",
+        ".write": false
+      }
+    }
+  }
+}

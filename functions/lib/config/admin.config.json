@@ -1,0 +1,18 @@
+{
+    "nextter-38532": {
+        "_url-to-send-receipt": "http://localhost:5000/nextter-38532/us-central1/app/api/v1/private/tests/receive-receipt-as-admin",
+        "__url-to-send-receipt": "https://us-central1-nextter-38532.cloudfunctions.net/app/api/v1/private/tests/receive-receipt-as-admin",
+        "url-to-send-receipt": "http://homolog.api.admin.foxtter.com.br/subscription/process-transaction",
+        "url": "https://us-central1-nextter-38532.cloudfunctions.net/app/api/v1"
+    },
+    "nextter-homologacao": {
+        "__url-to-send-receipt": "http://localhost:5000/nextter-homologacao/us-central1/app/api/v1/private/tests/receive-receipt-as-admin",
+        "_url-to-send-receipt": "https://us-central1-nextter-homologacao.cloudfunctions.net/app/api/v1/private/tests/receive-receipt-as-admin",
+        "url-to-send-receipt": "http://homolog.api.admin.foxtter.com.br/subscription/process-transaction",
+        "url": "https://us-central1-nextter-homologacao.cloudfunctions.net/app/api/v1"
+    },
+    "nextter-production": {
+        "url-to-send-receipt": "http://homolog.api.admin.foxtter.com.br/subscription/process-transaction",
+        "url": "https://us-central1-nextter-production.cloudfunctions.net/app/api/v1"
+    }
+}

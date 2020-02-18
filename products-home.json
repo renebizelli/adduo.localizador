@@ -1,0 +1,81 @@
+{
+    "_id": "home",
+    "data": {
+        "pt": {
+            "title": "Foxtter Premium",
+            "price": "R$99,99/mês",
+            "priceDescription": "assinando o plano anual",
+            "img": "http://foxtter.com.br/app/resources/pictures/subscription-header.jpg",
+            "features": [
+                {
+                    "title": "Localização",
+                    "description": "Localização Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/localization.png"
+                },
+                {
+                    "title": "Cercas Virtuais",
+                    "description": "Cercas Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/fence.png"
+                },
+                {
+                    "title": "Alertas",
+                    "description": "Alertas Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/alert.png"
+                },
+                {
+                    "title": "Assinatura",
+                    "description": "Assinatura Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/subscription.png"
+                },
+                {
+                    "title": "Solicitações",
+                    "description": "Solicitações Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/request.png"
+                },
+                {
+                    "title": "Conveniência",
+                    "description": "Conveniência Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/convenience.png"
+                }
+            ]
+        },
+        "en": {
+            "title": "Foxtter Premium",
+            "price": "R$99,99/month",
+            "priceDescription": "Subscribing the yearly plan",
+            "img": "http://foxtter.com.br/app/resources/pictures/subscription-header.jpg",
+            "features": [
+                {
+                    "title": "Localization",
+                    "description": "Localização Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/localization.png"
+                },
+                {
+                    "title": "VIrtual Fences",
+                    "description": "Cercas Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/fence.png"
+                },
+                {
+                    "title": "Alerts",
+                    "description": "Alertas Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/alert.png"
+                },
+                {
+                    "title": "Subscribe",
+                    "description": "Assinatura Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/subscription.png"
+                },
+                {
+                    "title": "Requests",
+                    "description": "Solicitações Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/request.png"
+                },
+                {
+                    "title": "Convenience",
+                    "description": "Conveniência Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+                    "img": "http://foxtter.com.br/app/resources/icons/convenience.png"
+                }
+            ]
+        }
+    }
+}

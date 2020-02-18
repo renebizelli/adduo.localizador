@@ -1,0 +1,12 @@
+{
+    "name": "Localização de Smartphone",
+    "endpoint": "/restricted/location/{0}",
+    "method": "PUT",
+    "invalid-items": [
+        {
+            "name": "Geo inválido",
+            "data": {},
+            "code": "error:generic.position"
+        }
+    ]
+}

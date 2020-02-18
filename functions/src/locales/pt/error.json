@@ -1,0 +1,104 @@
+{
+    "unprocessable": "A requisição não pode ser processada.",
+    "generic": {
+        "device": "A informação deviceId é necessária.",
+        "fence": "A informação fenceId é necessária.",
+        "position": "As informações Latitude e Longitude são necessárias.",
+        "uid": "A informação UID é necessaria.",
+        "user-not-found": "Usuário não encontrado.",
+        "id": "Por favor, informe o id do item.",
+        "platform": "A informação platform é necessária (apple|google)",
+        "parse-xml-json": "Erro no parse de XML para json.",
+        "monitorable-uid": "A informação monitorableUid é necessária."
+    },
+    "fence": {
+        "form": {
+            "title": "Por favor, informe o título da cerca.",
+            "address": "Por favor, informe o endereço da cerca.",
+            "priority": "Por favor, defina a prioridade da cerca.",
+            "radius": "Por favor, defina o tamanho da cerca.",
+            "location": "Por favor, informe uma localização válida.",
+            "lat": "Por favor, informe uma localização válida.",
+            "lng": "Por favor, informe uma localização válida."
+        },
+        "not-found": "Cerca virtual não encontrada."
+    },
+    "user": {
+        "form": {
+            "name": "Por favor, informe seu nome completo.",
+            "email": "Por favor, informe um e-mail válido.",
+            "password": "A senha não é forte o suficiente.",
+            "confirm-password": "A confirmação de senha não é igual a senha digitada.",
+            "phone": "Por favor, informe um  número válido de celular.",
+            "email-already-exists": "Este e-mail já está em uso por outro usuário.",
+            "phone-already-exists": "Um usuário com o número de telefone fornecido já existe.",
+            "invalid-disabled-field": "A informação disabled deve ser um booleano (true|false)."
+        },
+        "notFound": "Este usuário não está cadastrado.",
+        "changedCultureError": "Por favor, informe a cultura corretamente (pt|en).",
+        "changePasswordNotConfirm": "Por favor confirme a senha.",
+        "changePasswordMissInformation": "Por favor, informe a nova senha e sua confirmação.",
+        "changePasswordInvalidCode": "Essa solicitação para troca de senha expirou ou já foi utilizada."
+    },
+    "location": {
+        "accuracy": "A informação Accuracy é necessária.",
+        "altitude": "A informação Altitude é necessária.",
+        "direction": "A informação Direction é necessária.",
+        "speed": "A informação Speed é necessária.",
+        "accuracy-state": "A informação AccuracyState é necessária.",
+        "battery": "A informação Battery é necessária.",
+        "device": "A informação deviceId é necessária.",
+        "type": "A informação Type para IOT deve ser informado. (status|position)"
+    },
+    "auth": {
+        "tokenNotFound": "O Token de autorização não foi encontrado.",
+        "invalid-auth": "E-mail ou senha inválidos.",
+        "token": "A informação Token é necessária.",
+        "setup": {
+            "deviceId": "A informação deviceId é necessária."
+        }
+    },
+    "device": {
+        "smartphone": {
+            "form": {
+                "alias": "A informação Alias é necessária."
+            },
+            "battery": "Por favor, informe o valor numérico para bateria",
+            "gps": "Por favor, informe o valor para GPS",
+            "not-found": "Device não encontrado."
+        },
+        "iot": {
+            "form": {
+                "empty-alias": "A informação Nome é necessária.",
+                "empty-externalId": "O código do fabricante é necessário para a ativação do dispositivo.",
+                "invalid-token": "O token informado está inválido.",
+                "empty-token": "O token é necessário para a ativação do dispositivo."
+            },
+            "admin" : {
+                "invalid-data" : "Dados inválidos do Iot",
+                "activation-error" : "Erro na ativação"
+            } 
+        }
+    },
+    "monitoring": {
+        "form": {
+            "alias": "Por favor, informe um nome para este usuário.",
+            "uid": "Por favor, informe o uid do usuário."
+        },
+        "request-code-is-required": "Um código de solicitação de acesso a localização é necessário.",
+        "request-code-invalid": "Este código de solicitação de acesso a localização está inválido.",
+        "request-accept-conflit": "Você já permitiu anteriormente que {0} tenha acesso a sua localização.",
+        "monitoring-bad-request": "As informações monitoredUserUid e allowedUserUid são necessárias.",
+        "allowed-bad-request": "A informação monitoredUserUid é necessária.",
+        "selected-save-bad-request": "Por favor, selecione ao menos um usuário da lista",
+        "selected-save-exceeded" : "Quantidade de selecionados excedeu"
+    },
+    "alert": {
+        "error": "Erro ao inserir alerta"
+    },
+    "subscription": {
+        "receipt": {
+            "id-invalid": "id da transação inválida"
+        }
+    }
+}
